@@ -1,5 +1,7 @@
 function modifyArray(nums) {
-    let array_s = nums.map(function(nums){
+    
+    try{
+        let array_s = nums.map(function(nums){
         if(nums % 2 == 0){
             return nums*2 // return each event elements mult. by 2
         }
@@ -10,4 +12,9 @@ function modifyArray(nums) {
         
     });
     return array_s; // Retun the new array 
+    }
+    catch(e){
+        console.log(e.message);
+    }
+    
 }

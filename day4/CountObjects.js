@@ -1,5 +1,6 @@
 function getCount(objects) {
-    var count = 0;
+    try{
+        var count = 0;
     for (var index in objects)
         {
             if (objects[index].x == objects[index].y)
@@ -8,4 +9,8 @@ function getCount(objects) {
                 }
         }
     return count;
+    }
+    catch(e){
+        console.log(e.message);
+    }
 }

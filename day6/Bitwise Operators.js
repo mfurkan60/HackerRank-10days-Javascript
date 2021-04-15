@@ -5,7 +5,8 @@
 *	k: An integer.
 */
 function getMaxLessThanK(n, k) {
-    let maximum = 0;
+   try{
+        let maximum = 0;
     let current = -1;
     for (let i = 1; i < k; i++) 
     {
@@ -19,5 +20,9 @@ function getMaxLessThanK(n, k) {
         }
     }
     return maximum;
+   }
+    catch(e){
+        console.log(e.message);
+    }
 }
 

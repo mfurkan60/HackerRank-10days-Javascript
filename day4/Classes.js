@@ -1,5 +1,6 @@
 class Polygon {
-    constructor(heights) 
+   try{
+        constructor(heights) 
     {
         let polygon_perimeter = 0;
         for (let index in heights)
@@ -14,5 +15,10 @@ class Polygon {
     {
         return this.my_perimeter;
     }
+   }
+
+catch(e){
+    console.log(e.message);
+}
     
 }

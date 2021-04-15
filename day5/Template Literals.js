@@ -1,5 +1,7 @@
 function sides(literals, ...expressions) {
-    var area = expressions[0];
+   
+    try{
+        var area = expressions[0];
     var perimeter = expressions[1];
     
     var s1 = (perimeter + Math.sqrt(perimeter * perimeter  - (16 * area))) / 4;
@@ -9,4 +11,10 @@ function sides(literals, ...expressions) {
     var array = [s1, s2];
     array =  array.sort(function (a,b) {return a-b;});
     return array;
+    }
+    
+    catch(e){
+        console.log(e.message);
+    }
+    
 }
